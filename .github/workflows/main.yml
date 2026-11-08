@@ -11,6 +11,7 @@ jobs:
         with:
           channel: stable
       - run: flutter create . --platforms=android --project-name tribes_game
+      - run: flutter pub add image_picker
       - run: cp main.dart lib/main.dart
       - run: flutter build apk --release
       - uses: actions/upload-artifact@v4
